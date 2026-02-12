@@ -1,0 +1,27 @@
+slam_node:
+  ros__parameters:
+    odom_topic: "/ekf/odom"
+    scan_topic: "/scan"
+    
+    map_frame: "map"
+    odom_frame: "odom"
+    base_frame: "base_link"
+    
+    map_resolution: 0.05      
+    map_width: 50.0           
+    map_height: 50.0          
+    map_origin_x: -25.0       
+    map_origin_y: -25.0       
+    
+    map_update_interval: 1.0  
+    
+    use_scan_matching: true
+    scan_matching_iterations: 20
+
+map_saver_node:
+  ros__parameters:
+    map_topic: "/map"
+    output_dir: "~/maps"
+    map_name: "slam_map"
+    auto_save: false
+    auto_save_interval: 60.0  
